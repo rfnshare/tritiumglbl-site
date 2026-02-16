@@ -1,10 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tritium Global | Website Under Construction</title>
+    <!-- BASIC -->
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Tritium Global | Software, Data & Cloud Solutions</title>
 
+    <!-- SEO -->
+    <meta name="description"
+          content="Tritium Global is a software, data, and cloud solutions partner delivering secure, scalable, and enterprise-ready digital systems."/>
+    <meta name="keywords"
+          content="Tritium Global, Software Company Bangladesh, Cloud Solutions, Enterprise Software, Data Engineering"/>
+    <meta name="robots" content="index, follow"/>
+    <link rel="canonical" href="https://tritiumglbl.com/"/>
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Tritium Global | Software, Data & Cloud Solutions"/>
+    <meta property="og:description" content="Enterprise-grade software, data, and cloud solutions partner."/>
+    <meta property="og:url" content="https://tritiumglbl.com/"/>
+    <meta property="og:site_name" content="Tritium Global"/>
+
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Tritium Global | Software, Data & Cloud Solutions"/>
+    <meta name="twitter:description" content="Secure, scalable, and enterprise-ready digital solutions."/>
+
+    <!-- FAVICON -->
+    <link rel="icon"
+          href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>T</text></svg>">
+
+    <!-- SCHEMA -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Tritium Global",
+            "url": "https://tritiumglbl.com",
+            "logo": "https://tritiumglbl.com/logo.png",
+            "email": "support@tritiumglbl.com",
+            "telephone": "+8801521259370",
+            "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "BD"
+            }
+        }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const progressBar = document.getElementById("progressBar");
+            const funStatus = document.getElementById("funStatus");
+            const buildBtn = document.getElementById("buildBtn");
+
+            if (!progressBar || !funStatus || !buildBtn) return;
+
+            let progress = 0;
+
+            const messages = [
+                "Initializing cloud infrastructure ☁️",
+                "Deploying backend services ⚙️",
+                "Optimizing database queries 🗄️",
+                "Running security checks 🔐",
+                "Finalizing UI components 🎨",
+                "Scaling services for production 🚀"
+            ];
+
+            buildBtn.addEventListener("click", () => {
+                if (progress >= 100) {
+                    funStatus.textContent = "🎉 Build complete! See you soon.";
+                    return;
+                }
+
+                const increment = Math.floor(Math.random() * 15) + 5;
+                progress = Math.min(progress + increment, 100);
+
+                progressBar.style.width = progress + "%";
+                funStatus.textContent =
+                    messages[Math.floor(Math.random() * messages.length)];
+
+                if (progress === 100) {
+                    buildBtn.textContent = "Build Completed";
+                    buildBtn.disabled = true;
+                }
+            });
+        });
+    </script>
+
+
+
+    <!-- STYLES -->
     <style>
         :root {
             --primary: #0b5ed7;
@@ -26,101 +110,180 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            min-height: 100vh;
             padding: 24px;
         }
 
-        .container {
-            max-width: 520px;
+        main {
+            max-width: 560px;
             width: 100%;
-            text-align: center;
-            background: #ffffff;
+            background: #fff;
             padding: 48px 36px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+            border-radius: 14px;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+            text-align: center;
         }
 
         h1 {
             margin: 0;
-            font-size: 32px;
+            font-size: 34px;
             font-weight: 700;
         }
 
         .tagline {
-            margin-top: 8px;
-            color: var(--primary);
-            font-weight: 600;
+            margin-top: 10px;
             font-size: 15px;
+            font-weight: 600;
+            color: var(--primary);
         }
 
         .status {
-            margin: 28px 0 16px;
+            margin: 32px 0 16px;
             font-size: 18px;
             font-weight: 500;
         }
 
         .description {
-            color: var(--muted);
             font-size: 15px;
-            line-height: 1.6;
+            color: var(--muted);
+            line-height: 1.7;
         }
 
         .contact {
-            margin-top: 28px;
+            margin-top: 30px;
             font-size: 14px;
         }
 
         .contact a {
             color: var(--primary);
-            text-decoration: none;
             font-weight: 600;
+            text-decoration: none;
         }
 
         footer {
-            margin-top: 32px;
+            margin-top: 36px;
             font-size: 13px;
             color: var(--muted);
         }
 
         .dot {
-            animation: blink 1.5s infinite;
+            animation: blink 1.4s infinite both;
+        }
+
+        .dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .dot:nth-child(3) {
+            animation-delay: 0.4s;
         }
 
         @keyframes blink {
-            0% { opacity: 0.2; }
-            50% { opacity: 1; }
-            100% { opacity: 0.2; }
+            0% {
+                opacity: 0.2;
+            }
+            20% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0.2;
+            }
         }
+
+        .fun-box {
+            margin-top: 36px;
+            padding-top: 20px;
+            border-top: 1px dashed #e5e7eb;
+        }
+
+        .fun-title {
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .progress-container {
+            width: 100%;
+            height: 10px;
+            background: #e5e7eb;
+            border-radius: 999px;
+            overflow: hidden;
+            margin: 12px 0;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #0b5ed7, #2563eb);
+            transition: width 0.4s ease;
+        }
+
+        .fun-status {
+            font-size: 14px;
+            color: #4b5563;
+            margin: 10px 0 14px;
+        }
+
+        .fun-btn {
+            background: #0b5ed7;
+            color: #fff;
+            border: none;
+            padding: 10px 18px;
+            font-size: 14px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .fun-btn:hover {
+            background: #094cb4;
+        }
+
     </style>
 </head>
 
 <body>
-<div class="container">
+<main>
     <h1>Tritium Global</h1>
     <div class="tagline">Software, Data & Cloud Solutions Partner</div>
 
     <div class="status">
-        Website under construction<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span>
+        Website under construction
+        <span class="dot">.</span><span class="dot">.</span><span class="dot">.</span>
     </div>
 
     <p class="description">
-        We are currently building our official website.
-        Our team is working on delivering a clear, reliable,
-        and enterprise-ready digital presence.
+        Tritium Global delivers enterprise-grade software engineering,
+        data platforms, and cloud-native solutions.
+        Our official website is currently under development.
     </p>
 
+    <div class="fun-box">
+        <p class="fun-title">🚧 Help us build the platform</p>
+
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <p class="fun-status" id="funStatus">
+            Click the button to start building 🚀
+        </p>
+
+        <button class="fun-btn" id="buildBtn">
+            Contribute to Build
+        </button>
+    </div>
+
+
     <div class="contact">
-        📧 <a href="mailto:support@tritiumglbl.com">support@tritiumglbl.com</a><br />
+        📧 <a href="mailto:support@tritiumglbl.com">support@tritiumglbl.com</a><br/>
         📞 +880 1521-259370
     </div>
 
     <footer>
         © <span id="year"></span> Tritium Global. All rights reserved.
     </footer>
-</div>
+</main>
 
 <script>
-    // Auto-update year
     document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 </body>
